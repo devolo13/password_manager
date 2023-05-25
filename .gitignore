@@ -4,6 +4,3 @@
 
 /models/pirate.model.js
 /controllers/pirate.controller.js
-/client/src/components/PirateDetail.js
-/client/src/components/PirateForm.js
-/client/src/components/PirateList.js
