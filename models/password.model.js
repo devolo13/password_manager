@@ -21,6 +21,9 @@ const PasswordSchema = new mongoose.Schema(
     notes: {
       type: String,
     },
+    sharedWith: {
+      type: Array,
+    }
   },
   { timestamps: true }
 );
