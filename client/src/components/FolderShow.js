@@ -13,7 +13,8 @@ const PasswordShow = () => {
 
   const copy = (passwordId) => {
     // passwordId will be database id of the password
-    let text = document.getElementById(passwordId).innerText;
+    // let text = document.getElementById(passwordId).innerText;
+    let text = "password123";
     navigator.clipboard.writeText(text);
   }
 
@@ -48,24 +49,24 @@ const PasswordShow = () => {
     <div className='d-flex'>
       {/* hamburger button? */}
       <div className="col-8 p-3 ps-5">
-        <h1>Folder Name:</h1>
+        <h1>All Passwords:</h1>
         <div className="ms-5">
           <div className="d-flex align-items-center my-3">
             {/* id needs to be database id of the password */}
             {/* all onclick functions need updated with the proper ids */}
-            <p className='centerText' id="password1">Password 1</p>
+            <p className='centerText' id="password1" className="col-2 centerText">Amazon</p>
             <button className="btn btn-primary mx-3" onClick={e => copy('password1')}>copy</button>
             <button className="btn btn-primary" onClick={e => view('password1')}>view</button>
             <button className="btn btn-warning ms-3" onClick={e => edit('password1')}>edit</button>
           </div>
           <div className="d-flex align-items-center my-3">
-            <p className='centerText' id="password2">Password 2</p>
+            <p className='centerText' id="password2" className="col-2 centerText">Etsy</p>
             <button className="btn btn-primary mx-3" onClick={e => copy('password2')}>copy</button>
             <button className="btn btn-primary" onClick={e => view('password2')}>view</button>
             <button className="btn btn-warning ms-3" onClick={e => edit('password2')}>edit</button>
           </div>
           <div className="d-flex align-items-center my-3">
-            <p className='centerText' id="password3">Password 3</p>
+            <p className='centerText' id="password3" className="col-2 centerText">LTT Store</p>
             <button className="btn btn-primary mx-3" onClick={e => copy('password3')}>copy</button>
             <button className="btn btn-primary" onClick={e => view('password3')}>view</button>
             <button className="btn btn-warning ms-3" onClick={e => edit('password3')}>edit</button>
