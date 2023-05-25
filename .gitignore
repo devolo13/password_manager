@@ -1,6 +1,3 @@
 /node_modules
 .env
 /client/node_modules
-
-/models/pirate.model.js
-/controllers/pirate.controller.js
