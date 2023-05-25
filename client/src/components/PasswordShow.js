@@ -1,6 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const PasswordShow = () => {
+  const Navigate = useNavigate();
+
+  const edit = (passwordId) => {
+    // passwordId will be database id of the password
+    Navigate('/password/1/edit');
+  }
   return (
     <div className='container mt-5'>
       <div className="col-8">
@@ -41,7 +48,7 @@ const PasswordShow = () => {
             </p>
           </div>
           <div className="d-flex justify-content-end">
-          <button className="btn btn-warning me-2">edit</button>
+          <button className="btn btn-warning me-2" onClick={e => edit()}>edit</button>
           <button className="btn btn-danger">delete</button>
           </div>
         </div>

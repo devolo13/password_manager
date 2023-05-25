@@ -1,6 +1,18 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const PasswordEdit = () => {
+  const Navigate = useNavigate();
+
+  const handleSave = () => {
+    // needs to take the form and save the info in the database
+    // then redirect to that password's folder
+    let folder = document.getElementById('folder').value;
+    if (folder == 'none'){
+      folder = 'all';
+    }
+    Navigate(`/folders/${folder}`);
+  }
   return (
     <div className='container my-5'>
       <div className="col-8">
@@ -40,7 +52,7 @@ const PasswordEdit = () => {
             </textarea>
           </div>
           <div className="d-flex justify-content-end">
-            <button className="btn btn-primary">save</button>
+            <button className="btn btn-primary" onClick={e => handleSave()}>save</button>
           </div>
         </div>
       </div>
